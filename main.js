@@ -197,7 +197,7 @@ rl.close()
 
 conn.isInit = false;
 conn.well = false;
-conn.logger.info(`[ ℹ️ ] Cargando...\n`);
+conn.logger.info(`[ ℹ️ ] انتظر...\n`);
 
 if (!opts['test']) {
   if (global.db) {
@@ -407,13 +407,13 @@ global.reloadHandler = async function(restatConn) {
 
   // Para cambiar estos mensajes, solo los archivos en la carpeta de language, 
   // busque la clave "handler" dentro del json y cámbiela si es necesario
-  conn.welcome = '👋 ¡Bienvenido/a!\n@user';
-  conn.bye = '👋 ¡Hasta luego!\n@user';
-  conn.spromote = '*[ ℹ️ ] @user Fue promovido a administrador.*';
-  conn.sdemote = '*[ ℹ️ ] @user Fue degradado de administrador.*';
-  conn.sDesc = '*[ ℹ️ ] La descripción del grupo ha sido modificada.*';
-  conn.sSubject = '*[ ℹ️ ] El nombre del grupo ha sido modificado.*';
-  conn.sIcon = '*[ ℹ️ ] Se ha cambiado la foto de perfil del grupo.*';
+  conn.welcome = '👋 مرحبا/في!\n@user';
+  conn.bye = '👋 ¡وتهلااا اعشيري!\n@user';
+  conn.spromote = '*[ ℹ️ ] @user اصبح مشرفا الان.*';
+  conn.sdemote = '*[ ℹ️ ] @user لم تعد مشرفا.*';
+  conn.sDesc = '*[ ℹ️ ] تم تغيير الوصف*';
+  conn.sSubject = '*[ ℹ️ ] تم تغير اسم الغروب*';
+  conn.sIcon = '*[ ℹ️ ] تم تغيير صورة الغروب.*';
   conn.sRevoke = '*[ ℹ️ ] El enlace de invitación al grupo ha sido restablecido.*';
 
   conn.handler = handler.handler.bind(global.conn);
